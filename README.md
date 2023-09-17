@@ -11,11 +11,12 @@ Algorie is a web application that generates hints for coding problems based on a
 - [API Key]
 - [How to Start]
 - [Contributing]
+</br></br>
 
 
 ## Prerequisites
 
-Before you can run the Algorie Scratch application, make sure you have the following prerequisites installed:
+Before you run the Algorie Scratch application, please make sure that you have all of the following prerequisites installed:
 
 - Python. (3.6 or higher)
 - Python packages. (OpenAI and Flask)
@@ -45,18 +46,18 @@ pip3 install flask
 
 3. Get a secret API key
 
-4. Open in algorie.py <br/><br/>
-api_key = "Enter your secret API key" <br/><br/>
+4. Open `algorie.py` <br/>
+`api_key = "Enter your secret API key"` <br/>
 Change it to your unique key!
 
 
 ## How to Start
 
-1. 'cd' to directory of alogire.py and templates.
+1. `cd` to directory where have `alogire.py` and `templates`
 
-2. 'python3 algorie.py'
+2. `python3 algorie.py`
 
-3. Open any web browser and type 'http://127.0.0.1:5000' in URL
+3. Open any web browser and type `http://127.0.0.1:5000` in URL
 
 4. Enjoy!
 
