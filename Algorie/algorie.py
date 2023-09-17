@@ -37,13 +37,13 @@ def get_data():
 
 
 # Hard coded api key.
-api_key = "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"
+api_key = "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"
 
 # Initialize the OpenAI API client
 openai.api_key = api_key
 
 def generate_hint(coding_description, user_code):
-    prompt = f"Given the coding description: '{coding_description}', and user's current code: '{user_code}', please give a hint."
+    prompt = f"Given the coding description: '{coding_description}', and user's current code: '{user_code}', please give a hint. If code is perfect for description print 'You got it!'"
 
     openai.api_key = api_key
 

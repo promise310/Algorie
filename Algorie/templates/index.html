@@ -44,9 +44,9 @@
 
     <!-- HOME PAGE -->
     <section id = "home">
-      <h2 class="title">Hi This is Algorie</h2>
-      <p class="desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam corrupti culpa quidem facere incidunt, eaque nisi provident distinctio cupiditate veritatis officia, minus optio consectetur iusto dolorem labore nesciunt soluta! </p>
-      <!-- <img class="icon" src="./icon.png" alt=""> -->
+      <h2 class="title">Welcome to Algorie</h2>
+      <p class="desc">Your new coding buddy :) </p>
+      <img class="icon" src="../static/icon.png" alt="">
       <div class="arr-btn">
         <a href="#problem">Let's Try <i class="fa-solid fa-arrow-down"></i></a>
       </div>
@@ -58,9 +58,9 @@
     <!-- PROBLEM SECTION -->
     <section id="problem">
       <div class="pro-vert">
-        <h2 class="pro-title">What is your question?</h2>
+        <h2 class="pro-title">Type code description</h2>
         <form id="dataForm">
-          <textarea id="coding_description" name="coding_description" placeholder="Write your problem here..."></textarea>
+          <textarea id="coding_description" name="coding_description" placeholder="Write your description here."></textarea>
         </form>
       </div>
     </section>
@@ -75,17 +75,16 @@
           <h2 class="mycode-title">What is your code?</h2>
 
           <!-- <div class="hint"> -->
-            <p class="hintMessage">Your hint will show up here!</p>
+            <p class="hintMessage">Your hint will show up below</p>
 
-            <div class="hhh">Hint  </div>
-            <p id="result"></p>
-            <p id="hint"></p>
+            <div class="hhh"> <p id="hint"></p></div>
+           
           <!-- </div> -->
         </div>
 
         <form id="codeForm">
-          <textarea id="user_code" name="user_code" placeholder="Write your code here..." ></textarea>
-          <button type="submit" class="submit-button">Get Your Hint</button>
+          <textarea id="user_code" name="user_code" placeholder="Write your code here." ></textarea>
+          <button type="submit" class="submit-button">HINT</button>
         </form>
 
       </div>
@@ -97,7 +96,7 @@
     <footer>
       <div class="footer-content">
         <h3>Algorie</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odio magni eum architecto, blanditiis dolorum alias autem aut quam aliquid quos cum at, ad voluptatum magnam possimus, sequi vitae eos! </p>
+        <p>ShellHacks 2023</p>
       </div>
 
       <!-- <div class="footer-bottom">
@@ -129,7 +128,6 @@
           })
           .then(response => response.json())
           .then(data => {
-              document.getElementById('result').textContent = data.result;
               document.getElementById('hint').textContent = data.hint; // Display the hint
           })
           .catch(error => {
