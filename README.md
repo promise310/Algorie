@@ -1,6 +1,7 @@
 # Algorie
 
 Algorie is a web application that generates hints for coding problems based on a description and user's current code. It uses Python Flask for the backend and the OpenAI API for generating hints.
+</br></br>
 
 
 ## Table of Contents
@@ -8,6 +9,7 @@ Algorie is a web application that generates hints for coding problems based on a
 - [Prerequisites]
 - [Python Package Installation]
 - [API Key]
+- [How to Start]
 - [Contributing]
 
 
@@ -43,9 +45,20 @@ pip3 install flask
 
 3. Get a secret API key
 
-4. On algorie.py <br/><br/>
+4. Open in algorie.py <br/><br/>
 api_key = "Enter your secret API key" <br/><br/>
-Change it to your key!
+Change it to your unique key!
+
+
+## How to Start
+
+1. 'cd' to directory of alogire.py and templates.
+
+2. 'python3 algorie.py'
+
+3. Open any web browser and type 'http://127.0.0.1:5000' in URL
+
+4. Enjoy!
 
 
 ## Contributing
