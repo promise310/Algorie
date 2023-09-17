@@ -19,60 +19,74 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <script src="./algorie.js"></script>
+    <!-- <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"> -->
+    <script src="https://kit.fontawesome.com/0e9045a045.js" crossorigin="anonymous"></script>
+
+
+
     <title>Algorie</title>
   </head>
   <body id="container">
-    <header>
+    <header class="nav">
       <h1 class="name"> <a href="#home">Algorie</a></h1>
       <div class="navbar">
         <ul class="navbars">
           <li class="link"><a href="#home">Home</a></li>
           <li class="link"><a href="#problem">Problem</a></li>
-          <li class="link"><a href="#hint">Hint</a></li>
+          <!-- <li class="link"><a href="#hint">Hint</a></li> -->
           <li class="link"><a href="#mycode">My Code</a></li>
         </ul>
       </div>
     </header>
-    <section id="home">
-      <h2 class="title">Algorie</h2>
-      <p class="desc">
-        Let me help you study algorithms!
-      </p>
 
+
+
+    <!-- HOME PAGE -->
+    <section id = "home">
+      <h2 class="title">Hi This is Algorie</h2>
+      <p class="desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quibusdam corrupti culpa quidem facere incidunt, eaque nisi provident distinctio cupiditate veritatis officia, minus optio consectetur iusto dolorem labore nesciunt soluta! </p>
+      <!-- <img class="icon" src="./icon.png" alt=""> -->
+      <div class="arr-btn">
+        <a href="#problem">Let's Try <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
     </section>
+
+
+
 
     <!-- PROBLEM SECTION -->
     <section id="problem">
-      <h2 class="sec-title">What is your question?</h2>
-
-      <form>
-        <input type="text" class="input-box" placeholder="Enter problem here" value="">
-      </form>
-      <button type="submit" class="submit-button">Submit</button>
+      <div class="pro-vert">
+        <h2 class="pro-title">What is your question?</h2>
+        <form id="dataForm">
+          <textarea id="coding_description" name="coding_description" placeholder="Write your problem here..."></textarea>
+        </form>
+      </div>
     </section>
 
-    <!-- HINT SECTION -->
-    <section id="hint">
-        <h2 class="sec-title">Hint</h2>
-        <div class="hhh">
-            <!-- <h3>Choose your landscape color</h3> -->
-            <div class="hintMessage">
-                Hint Message
-            </div>
-        <button type="reg" class="reg-button">Regenerate</button>
-        </div>
-    </section>
+  
+  
 
     <!-- MYCODE SECTION -->
     <section id="mycode">
-        <h2 class="sec-title">My Code</h2>
+      <div class="vert">
+        <div class="box">
+          <h2 class="mycode-title">What is your code?</h2>
 
-        <form>
-            <input type="text" class="input-box" placeholder="Enter your code here" value="">
+          <!-- <div class="hint"> -->
+            <p class="hintMessage">Your hint will show up here!</p>
+
+            <div class="hhh">Hint  </div>
+            <button type="submit" class="submit-button">Get Your Hint</button>
+          <!-- </div> -->
+        </div>
+
+        <form id="dataForm">
+          <textarea id="user_code" name="user_code" placeholder="Write your code here..." ></textarea>
         </form>
-        <button type="submit" class="submit-button">Submit</button>
-      </section>
+
+      </div>
+    </section>
 
 
 
@@ -80,35 +94,46 @@
     <footer>
       <div class="footer-content">
         <h3>Algorie</h3>
-
-        <ul class="socials">
-          <li>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-          </li>
-
-          <li>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-          </li>
-
-          <li>
-            <a href="#"><i class="fa fa-google-plus"></i></a>
-          </li>
-
-          <li>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-          </li>
-
-          <li>
-            <a href="#"><i class="fa fa-linkedin-square"></i></a>
-          </li>
-        </ul>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam odio magni eum architecto, blanditiis dolorum alias autem aut quam aliquid quos cum at, ad voluptatum magnam possimus, sequi vitae eos! </p>
       </div>
 
-      <div class="footer-bottom">
+      <!-- <div class="footer-bottom">
         <p>Copyright &copy <span id="year"></span> <a href="#">2023</a></p>
-      </div>
+      </div> -->
     </footer>
+    
 
-    <script src="algorie.js"></script>
+
+
+    <script>
+      document.getElementById('dataForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+
+          // Get the coding description and user code from the form
+          var codingDescription = document.getElementById('coding_description').value;
+          var userCode = document.getElementById('user_code').value;
+
+          // Send data to the backend using Fetch API
+          fetch('/get_data', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({
+                  coding_description: codingDescription,
+                  user_code: userCode
+              })
+          })
+          .then(response => response.json())
+          .then(data => {
+              document.getElementById('result').textContent = data.result;
+              document.getElementById('hint').textContent = data.hint; // Display the hint
+          })
+          .catch(error => {
+              console.error('Error:', error);
+          });
+      });
+    </script>
+   <script src="./scroll.js"></script>
   </body>
 </html>
