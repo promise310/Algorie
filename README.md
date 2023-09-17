@@ -3,6 +3,8 @@
 Algorie is a web application that generates hints for coding problems based on a description and user's current code. It uses Python Flask for the backend and the OpenAI API for generating hints.
 </br></br>
 
+<img width="1666" alt="page1" src="https://github.com/promise310/Algorie/assets/123554166/748315f1-ae8e-40d5-aad6-d18519b15923">
+
 
 ## Table of Contents
 
