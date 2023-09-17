@@ -48,7 +48,7 @@ pip3 install flask
 
 4. Open `algorie.py` <br/>
 `api_key = "Enter your secret API key"` <br/>
-Change it to your unique key!
+Change it to your unique key.
 
 
 ## How to Start
@@ -66,18 +66,18 @@ Change it to your unique key!
 
 If you would like to contribute to this project, please follow these steps:
 
-1. Fork the repository.
-2. Create a new branch for your feature
+1. Fork the repository </br>
+2. Create a new branch for your feature </br>
 ```
 git checkout -b feature
 ```
-3. Implement your feature or fix.
-4. Commit your changes
+3. Implement your feature or fix </br>
+4. Commit your changes </br>
 ```
 git commit -m "Your message"
 ```
-5. Push to the branch
+5. Push to the branch </br>
 ```
 git push origin feature
 ```
-6. Submit a pull request.
+6. Submit a pull request </br>
